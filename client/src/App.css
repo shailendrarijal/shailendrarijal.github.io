@@ -45,9 +45,6 @@ h1{
 
 .navbar{
   width: 100vw;
-
-  background-color: #888;
-  color: white;
 }
 .nav-link{
   margin: 0 10px 0 10px;
