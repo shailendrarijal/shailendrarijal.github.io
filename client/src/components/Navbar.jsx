@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-      <div className="navbar fixed-top navbar-expand-md text-center">
+      <div className="navbar bg-dark fixed-top navbar-expand-md text-center">
         
           <Link className="nav-link" to="/components/calculator">BMI Calculator </Link>
           {/* <p className="card-body">Calculate your BMI by entering your height and weight</p> */}
