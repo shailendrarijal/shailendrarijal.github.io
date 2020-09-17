@@ -5,7 +5,7 @@ function TimeNow(){
     const hourNow = new Date().getHours();
     const minNow = new Date().getMinutes();
 
-    const timeNow = hourNow + "" + ":" + ""+ minNow;
+    const timeNow = `${hourNow}:${minNow}`;
     
     return (
         <span>{timeNow}</span>
