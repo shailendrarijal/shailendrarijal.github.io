@@ -17,7 +17,7 @@ function WeatherApp(){
         const cityurl = event.target.value;
         setCityName({cityName: cityurl});
        
-        const apiKey = "d74e7281a15f3de4d183fc3c5109d414";
+        const apiKey = "";
         const unit = "metric";
 
         const url="https://api.openweathermap.org/data/2.5/weather?q=" + cityurl +"&units=" + unit+ "&appid=" + apiKey +"";
