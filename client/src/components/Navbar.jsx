@@ -8,7 +8,7 @@ function Navbar() {
           <Link className="nav-link" to="/components/calculator">BMI Calculator </Link>
           {/* <p className="card-body">Calculate your BMI by entering your height and weight</p> */}
         
-          <Link className="nav-link"  to="/components/confession">Confession </Link>
+          <Link className="nav-link"  to="/components/ConfessionHome">Confession </Link>
           {/* <p className="card-body">Upload a secret confession</p> */}
         
           <Link className="nav-link" to="/components/drumset">Drumset </Link>
@@ -19,7 +19,9 @@ function Navbar() {
         
           <Link className="nav-link" to="/components/weather-app">Weather App </Link>
           {/* <p className="card-body">Find out the weather of your city</p> */}
-        
+          
+          <Link className="nav-link" to="/components/ToDoList">Notepad </Link>
+
       </div>
     );
   };

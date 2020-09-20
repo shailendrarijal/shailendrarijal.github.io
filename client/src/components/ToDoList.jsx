@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
-function App() {
+function ToDoList() {
   const [notes, setNotes] = useState([]);
 
   function addNote(newNote) {
@@ -23,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <h1> Take note!</h1>
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         return (
@@ -36,9 +34,9 @@ function App() {
           />
         );
       })}
-      <Footer />
+        
     </div>
   );
 }
 
-export default App;
+export default ToDoList;

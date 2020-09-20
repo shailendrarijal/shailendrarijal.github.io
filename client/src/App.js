@@ -5,11 +5,13 @@ import { Route, Switch } from 'react-router-dom';
 
 
 import Calculator from "./components/Calculator";
-import Confession from "./components/Confession";
 import Drumset from "./components/Drumset";
 import DiceGame from "./components/DiceGame";
 import WeatherApp from "./components/WeatherApp";
 import Navbar from './components/Navbar';
+import ToDoList from './components/ToDoList';
+import ConfessionHome from './components/ConfessionHome';
+import TimeNow from './components/TimeNow';
 
 
 
@@ -17,14 +19,20 @@ function App() {
   return (
     <div className="App">
     
-    <Navbar />
-      <Switch>
-        <Route path="/components/calculator" component={Calculator} />
-        <Route path="/components/confession" component={Confession} />
-        <Route path="/components/drumset" component={Drumset} />
-        <Route path="/components/dice-game" component={DiceGame} />
-        <Route path="/components/weather-app" component={WeatherApp} />
-      </Switch>
+      <Navbar />
+      <div className="appSpace">  
+        <Switch>
+          <Route path="/components/calculator" component={Calculator} />
+          <Route path="/components/confessionHome" component={ConfessionHome} />
+          <Route path="/components/drumset" component={Drumset} />
+          <Route path="/components/dice-game" component={DiceGame} />
+          <Route path="/components/weather-app" component={WeatherApp} />
+          <Route path="/components/ToDoList" component={ToDoList} />
+
+        </Switch>
+      </div>
+      <div className="timeWidget align-middle"><TimeNow /></div>
+    
     </div>
   );
 }
