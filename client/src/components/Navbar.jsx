@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
     return (
 
-      <nav id="navbar" class="navbar navbar-expand-md fixed-top">
+      <nav id="navbar" class="navbar navbar-expand-md fixed-top mb4">
           <Link class="navbar-brand ml-4" to="/">Shailendra Rijal</Link>
           <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon">&lt;</span>

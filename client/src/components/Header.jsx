@@ -9,6 +9,12 @@ import iconLinkedIn from "../images/icon-linkedin.png";
 
 
 function Header() {
+
+    const [visibility, setVisibility] = useState(false);
+
+    function showInfo() {
+        setVisibility(!visibility);
+    }
     return (
 
     <header id="header" class="header">
@@ -27,9 +33,11 @@ function Header() {
                   <a href="https://www.linkedin.com/in/shailendrarijal/" target="_blank"><img class="icon" src={iconLinkedIn} alt="Linkedin link" /> </a>
               </div>
                 
-                <div class="icon-container rounded email-button">
+                <div class="icon-container rounded email-button" onClick={showInfo}>
                   <img id="email-icon" class="icon" src={iconEmail} alt="email link" />
-              </div>
+              </div>            
+              {visibility? <div className={visibility, "text-center container"}><span>Email: shailendrarijal@gmail.com</span></div> : null }
+
             </div>
               </div>
         </div>
