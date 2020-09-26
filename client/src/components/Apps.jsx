@@ -19,7 +19,7 @@ function Apps(){
                         </div>
                     </div>
                     
-                    <div class="card card-portfolio mt-5">
+                    <div class="card card-portfolio mb-5">
                         <div class="card-body">
                             <h5 class="card-title">BMI Calculator</h5>
                             <p class="card-text">Enter your weight and height and calcualate your BMI</p> 
