@@ -17,7 +17,7 @@ import Note from './components/Note';
 
 import ToDoList from './components/ToDoList';
 
-import WeatherApp from './components/WeatherApp';
+// import WeatherApp from './components/WeatherApp';
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
           <Route path="/Apps" component={Apps} />
           <Route path="/Contact" component={Contact} />
             <Switch>
-              <Route path="/Weatherapp" component={WeatherApp} />
+              {/* <Route path="/Weatherapp" component={WeatherApp} /> */}
               <Route path="/Calculator" component={Calculator} />
               <Route path="/DiceGame" component={DiceGame} />
               <Route path="/Drumset" component={Drumset} />

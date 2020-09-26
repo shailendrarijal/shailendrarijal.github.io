@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 import '../App.css';
 
 import iconGitHub from "../images/icon-github.png";
@@ -14,7 +16,7 @@ function Header() {
             <div class="container description">
                   <h1 class="greetings">Hi there,</h1>
                   <p class="title">Welcome to my website!</p>
-                <a class="btn seemore" href="#about">See More</a>
+                <Link class="btn seemore" to="/About">See More</Link>
                 
                 <div class="icon-box">
                   <div class="rounded icon-container">
@@ -37,3 +39,4 @@ function Header() {
   };
 
   export default Header;
+  export {Link};

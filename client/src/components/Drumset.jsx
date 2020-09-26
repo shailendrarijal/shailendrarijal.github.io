@@ -25,13 +25,13 @@ function Drumset(){
             <div className="jumbotron text-center">
             <h1>Drum Set</h1>
             <div className="set">
-                <button onClick={playTom1} className="w drum">w</button>
-                <button onClick={playTom2} className="a drum">a</button>
-                <button onClick={playTom3} className="s drum">s</button>
-                <button onClick={playTom4} className="d drum">d</button>
-                <button onClick={playKickBass} className="j drum">j</button>
-                <button onClick={playSnare} className="k drum">k</button>
-                <button onClick={playCrash} className="l drum">l</button>
+                <button onClick={playTom1} className="w drum"></button>
+                <button onClick={playTom2} className="a drum"></button>
+                <button onClick={playTom3} className="s drum"></button>
+                <button onClick={playTom4} className="d drum"></button>
+                <button onClick={playKickBass} className="j drum"></button>
+                <button onClick={playSnare} className="k drum"></button>
+                <button onClick={playCrash} className="l drum"></button>
             </div>
         </div>
        </div>

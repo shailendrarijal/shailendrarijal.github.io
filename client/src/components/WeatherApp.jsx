@@ -26,16 +26,13 @@ function WeatherApp(){
     }
 
 
-    async function getTemperature() {
-        const data = await fetch(url);
-        const resy = await data.json();
-        setCityName({
-            cityName: resy.name,
-            temperature: resy.main.temperature,
-            weatherDescription: resy.weather.description
-        });
-        
-    }
+    useEffect(() => {
+        const apiUrl = url;
+        fetch(apiUrl)
+          .then((res) => res.json())
+          .then((data) => {
+            setCityName({data: data });
+          });});
        
     return (
         <div className="container jumbotron text-center">
@@ -43,7 +40,7 @@ function WeatherApp(){
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="cityInput">City Name:</label>
                 <input onChange={handleChange} id="cityInput" type="text" name="cityName" value={city.cityName} autoComplete="off"/>
-                <Button variant="contained" color="primary" type="submit" onClick={getTemperature}>Find</Button>
+                <Button variant="contained" color="primary" type="submit" onClick={useEffect}>Find</Button>
                 <p> The city you are looking for is: <strong>{city.cityName}</strong></p>
             </form>
             <div id="result">
