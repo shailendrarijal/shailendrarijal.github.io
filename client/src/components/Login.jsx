@@ -1,6 +1,6 @@
 import React from "react";
 
-function Note(props) {
+function Login(props) {
   
 
   return (
@@ -44,4 +44,4 @@ function Note(props) {
   );
 }
 
-export default Note;
+export default Login;

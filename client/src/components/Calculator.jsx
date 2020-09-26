@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../App.css';
 
 function Calculator(){
     const [values, setValues] = useState({
@@ -35,19 +36,19 @@ function Calculator(){
 
 
     return (
-        <div class="container">
-        <h1 class="text-primary">BMI Calculator</h1>
-        <form>
-            <input 
-            onChange={handleChange}
-            class="form-control-sm" type="text" value = {values.weightValue} name="weight" placeholder="Enter your weight" /><code class="code">in Kg</code><br />
-            <input 
-            onChange={handleChange}
-            class="form-control-sm" type="text" value = {values.heightValue} name="height" placeholder="Enter your height" /><code class="code">in m</code><br />
+        <div class="container-fluid jumbotron text-center">
+            <h1>BMI Calculator</h1>
+            <form>
+                <input 
+                onChange={handleChange}
+                class="form-control-sm" type="text" value = {values.weightValue} name="weight" placeholder="Enter your weight" /><code class="code">in Kg</code><br />
+                <input 
+                onChange={handleChange}
+                class="form-control-sm" type="text" value = {values.heightValue} name="height" placeholder="Enter your height" /><code class="code">in m</code><br />
 
-            <button class="btn-lg btn-primary" onClick={handleClick}>Calculate</button>
-        </form>
-        <p class="resultDisplay">Your BMI is {bmiValue}</p>
+                <button class="btn-lg btn-primary" onClick={handleClick}>Calculate</button>
+            </form>
+            <p class="resultDisplay">Your BMI is {bmiValue}</p>
         </div>
 
  );

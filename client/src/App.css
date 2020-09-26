@@ -1,237 +1,244 @@
-.App {
-  text-align: center;
+/*////////////////////////////bootstrap formats//////////////////////*/
+.text-primary{
+  color: #003893;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-primary{
+  background-color: #003893;
+  color: #efefef;
 }
+/*////////////////////////////end of bootstrap formats//////////////////////*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.appSpace{
-  width: 80%;
-  height: 60vh;
-  display: inline-block;
-}
-.timeWidget{
-  padding: 20px;
-  width: 200px;
-  height: 200px;
-  display:inline-block;
-  font-size: 3rem;
-  border-radius: 100%;
-  background-color: #ccc;
-
-}
-
-h1{
-  margin-top: 50px; 
-  font-size: 5rem;
-  font-family: Verdana, cursive;
-  text-shadow: 5px 5px #ccc;
-
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.card{
-  height: 200px;
-  width: 200px; 
-  margin: 20px 30px;
-  padding: 10px 0;
-}
-
+/*////////////////////////////Header//////////////////////*/
 .navbar{
-  width: 100vw;
-  height: 30px;
-  margin: 0 0 20px 0;
+  background: #003893;
 }
+
+.nav-link, .navbar-brand{
+  color: #efefef;
+  cursor: pointer;
+}
+
 .nav-link{
-  margin: 0 10px 0 10px;
+  margin-right: 1em !important;
 }
 
-.container{
-  margin-top: 100px;
+.nav-link:hover{
+  background:#efefef;
+  color: #003893;
 }
 
-input[type= text]{
-  margin: 10px;
+.navbar-collapse{
+  justify-content: flex-end;
 }
 
-.resultDisplay{
+.navbar-toggler{
+  background: lightblue !important;
+}
+
+section{
+  box-shadow: 0 0 20px #ccc;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.header{
+  height: 100vh;
+  background-image: url("./images/backgroundHome.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay{
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left:0;
+  top:10;
+  background: rgba(244, 244, 244, 0.79);
+}
+
+.description{
+  position: absolute;
+  top: 30%;
+  margin: auto;
+  padding: 2em;
+  width: 95vw;
+}
+.description h1{
+  color: #003893;
+}
+.description p{
+  color: #666;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.seemore{
+  border: 1px solid #003893;
+  background: #003893;
+  color: #efefef;
+}
+.icon-box{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+}
+.icon-container{
+  width: 50px;
+  height: 50px;
+}
+.icon-container, .contact-item{
+  cursor: pointer;
+}
+.icon-container:hover{
+ width: 80px;
+  height: 80px;
+}
+.icon{
+  max-height: 100%;
+  max-width: 100%;
+}
+/*////////////////////////////End of Header//////////////////////*/
+
+
+/*////////////////////////////About//////////////////////*/
+
+.about{
+  margin: 4em 0;
+  padding: 1.5em;
+  position: relative;
+}
+
+.about h1{
+  color: #003893;
+  margin: 1em;
+}
+
+.about img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.img-container{
+  height: 20em;
+}
+
+.about span{
+  display: block;
+  color: #888;
+}
+
+.about .desc{
+  padding: 2em;
+  border-left: 4px solid #10828c;
+}
+.about .desc h3, h1, h2{
+  color: #10828c;
+}
+
+.about .desc p{
+  line-height: 2;
+  color: #888;
+}
+
+/*////////////////////////////End of About//////////////////////*/
+
+/*////////////////////////////Projects//////////////////////*/
  
-  padding: 5px;
-  background-color: #888;
-  color: white;
-  font-size: 2rem;
+.portfolio{
+  margin: 4em 0;
+  position: relative;
 }
 
+.card-portfolio{
+  width: 35em;
+  padding: 0.5em;
+  box-shadow: 0 0 20px #ccc;
+}
 
-/*////////////////////Drumset CSS /////////////////////*/
+.card-img-top{
+  height: 20em;
+  max-height: 20em;
+  width: 95%;
+  max-width: 100%;
+  margin: 1em;
+  border: 5px solid #333333;
+  opacity: 0.8;
+  padding: 1em;
+}
+/*////////////////////////////End of Projects//////////////////////*/
 
+/*////////////////////////////Contact//////////////////////*/
 
+.contact{
+  margin: 4em 0;
+  position: relative;
+}
 
+.contact h2, .portfolio h2{
+  color: #10828c;
+  margin: 2em;
+  
+}
 
+.contact-item{
+  width: 10em;
+  padding: 1em;
+  margin: auto;
+  box-shadow: 10px 10px 20px #ccc;
+  text-decoration: none;
+  color: #10828c;
+}
+/*////////////////////////////End of Contact//////////////////////*/
 
-
+/*////////////////////////////Apps//////////////////////*/
+.drum {
+  border-radius: 100%;
+  width: 10rem;
+  height: 10rem;
+}
 
 .w {
-  background-image: url(./images/tom1.png);
+  background-image: url("./images/tom1.png");
 }
 
 .a {
-  background-image: url(./images/tom2.png);
+  background-image: url("./images/tom2.png");
 
 }
 
 .s {
-  background-image: url(./images/tom3.png);
+  background-image: url("./images/tom3.png");
 
 }
 
 .d {
-  background-image: url(./images/tom4.png);
+  background-image: url("./images/tom4.png");
 
 }
 
 .j {
-  background-image: url(./images/snare.png);
+  background-image: url("./images/snare.png");
 
 }
 
 .k {
-  background-image: url(./images/kick.png);
+  background-image: url("./images/kick.png");
 
 }
 
 .l {
-  background-image: url(./images/crash.png);
+  background-image: url("./images/crash.png");
 
 }
 
-.set {
-  margin: 10% auto;
-}
-
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
-
-.pressed {
-  box-shadow: 0 3px 4px 0 #DBEDF3;
-  opacity: 0.5;
-}
-
-.red {
-  color: red;
-}
-
-.drum {
-  outline: none;
-  border: 10px solid #404B69;
-  font-size: 5rem;
-  font-family: 'Arvo', cursive;
-  line-height: 2;
-  font-weight: 900;
-  color: yellow;
-  text-shadow: 3px 0 #DBEDF3;
-  border-radius: 15px;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  margin: 10px;
-  background-color: white;
-}
-
-/*////////////////////Drumset CSS /////////////////////*/
-
-/*////////////////////DiceGame CSS /////////////////////*/
-
-
-.container {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
-
-.card {
-  margin-left: 15rem;
-  height: 300px;
-  width: 200px; 
-  text-align: center;
-  display: inline-block;
-}
-
-p {
-  color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
-}
-
-img {
-  width: 80%;
-}
-
-
-/*////////////////////DiceGame CSS /////////////////////*/
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-html {
-  font-family: "Montserrat", sans-serif;
-}
-body {
-  background: #eee;
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  padding: 0 16px;
-}
-
-header {
-  background-color: #f5ba13;
-  margin: auto -16px;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-  color: #fff;
-  font-family: "McLaren", cursive;
-  font-weight: 200;
-}
-
-footer {
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-}
-
-footer p {
-  color: #ccc;
-}
 .note {
   background: #fff;
   border-radius: 7px;
@@ -241,6 +248,7 @@ footer p {
   margin: 16px;
   float: left;
 }
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
@@ -252,59 +260,10 @@ footer p {
   word-wrap: break-word;
 }
 
-.note button {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  color: #f5ba13;
-  border: none;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  outline: none;
+.result, .playerName{
+  font-size: 3rem;
+  color: #10828c;
 }
-
-form.create-note {
-  position: relative;
-  width: 480px;
-  margin: 30px auto 20px auto;
-  background: #fff;
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
-}
-form.create-note input,
-form.create-note textarea {
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;
-  resize: none;
-}
-form.create-note button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: #f5ba13;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
-}
-/*////////////////////Notepad CSS /////////////////////*/
+/*////////////////////////////End of Apps//////////////////////*/
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

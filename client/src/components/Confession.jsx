@@ -1,6 +1,8 @@
 import React from "react";
 
 function Confession(){
+
+  const userWithSecrets[] = "";
     return (
         <div class="jumbotron text-center">
         <div class="container">

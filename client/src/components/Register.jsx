@@ -1,6 +1,6 @@
 import React from "react";
 
-function Note(props) {
+function Register(props) {
   
 
   return (
@@ -45,4 +45,4 @@ function Note(props) {
   );
 }
 
-export default Note;
+export default Register;

@@ -44,8 +44,11 @@ function CreateArea(props) {
             onChange={handleChange}
             value={note.title}
             placeholder="Title"
+            className="noteTitle"
           />
         )}
+
+        <div>
 
         <textarea
           name="content"
@@ -55,6 +58,7 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />
+        </div>
         <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
             <AddIcon />

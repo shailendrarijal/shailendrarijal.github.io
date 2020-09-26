@@ -1,5 +1,4 @@
-import React ,{ useState } from "react";
-import App from "../App.css";
+import React from "react";
 import useSound from 'use-sound';
 
 import tom1 from "../sounds/tom-1.mp3";
@@ -22,8 +21,9 @@ function Drumset(){
     const [playCrash] = useSound(crash);
 
     return (
-        <div className="container">
-            <h1 id="title" className="text-primary">Drum Set</h1>
+       <div className="container">
+            <div className="jumbotron text-center">
+            <h1>Drum Set</h1>
             <div className="set">
                 <button onClick={playTom1} className="w drum">w</button>
                 <button onClick={playTom2} className="a drum">a</button>
@@ -34,6 +34,7 @@ function Drumset(){
                 <button onClick={playCrash} className="l drum">l</button>
             </div>
         </div>
+       </div>
  );
 }
 

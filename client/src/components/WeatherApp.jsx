@@ -7,6 +7,7 @@ import TimeNow from './TimeNow';
 function WeatherApp(){
 
     const [url, setUrl] = useState("");
+      
     const [city, setCityName] = useState({
         cityName: "",
         temperature: "",
@@ -37,8 +38,8 @@ function WeatherApp(){
     }
        
     return (
-        <div className="container">
-        <h1 className="text-primary">Weather App</h1>
+        <div className="container jumbotron text-center">
+        <h1>Weather App</h1>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="cityInput">City Name:</label>
                 <input onChange={handleChange} id="cityInput" type="text" name="cityName" value={city.cityName} autoComplete="off"/>

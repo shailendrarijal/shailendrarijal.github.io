@@ -1,39 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
 
+import Apps from "./components/Apps";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import About from "./components/About";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
-import Calculator from "./components/Calculator";
-import Drumset from "./components/Drumset";
-import DiceGame from "./components/DiceGame";
-import WeatherApp from "./components/WeatherApp";
-import Navbar from './components/Navbar';
+import Calculator from './components/Calculator';
+
+import DiceGame from './components/DiceGame';
+import Drumset from './components/Drumset';
+import Note from './components/Note';
+
 import ToDoList from './components/ToDoList';
-import ConfessionHome from './components/ConfessionHome';
-import TimeNow from './components/TimeNow';
 
+import WeatherApp from './components/WeatherApp';
 
 
 function App() {
   return (
+    <Router>
     <div className="App">
-    
+     
       <Navbar />
-      <div className="appSpace">  
+      
         <Switch>
-          <Route path="/components/calculator" component={Calculator} />
-          <Route path="/components/confessionHome" component={ConfessionHome} />
-          <Route path="/components/drumset" component={Drumset} />
-          <Route path="/components/dice-game" component={DiceGame} />
-          <Route path="/components/weather-app" component={WeatherApp} />
-          <Route path="/components/ToDoList" component={ToDoList} />
-
+          <Route exact path="/" component={Header} />
+          <Route path="/About" component={About} />
+          <Route path="/Projects" component={Projects} />
+          <Route path="/Apps" component={Apps} />
+          <Route path="/Contact" component={Contact} />
+            <Switch>
+              <Route path="/Weatherapp" component={WeatherApp} />
+              <Route path="/Calculator" component={Calculator} />
+              <Route path="/DiceGame" component={DiceGame} />
+              <Route path="/Drumset" component={Drumset} />
+              <Route path="/Note" component={Note} />
+              <Route path="/ToDoList" component={ToDoList} />
+            </Switch>
         </Switch>
-      </div>
-      <div className="timeWidget align-middle"><TimeNow /></div>
-    
+
     </div>
+    </Router>
   );
 }
 
