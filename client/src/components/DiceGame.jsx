@@ -83,8 +83,8 @@ function DiceGame(){
     }
 
     return (
-       <div>
-         <div className="container jumbotron text-center">
+       <div className="container-fluid">
+         <div className="jumbotron text-center">
         
         <h1>Test your luck!</h1>
         <p>Type in the boxes to change your name!</p>
@@ -92,13 +92,13 @@ function DiceGame(){
             <div className="dice card mx-auto">
                 <input type='text' onChange={handleChange} name="player1" value={player.player1}/>
                 <p className="playerName">{player.player1}</p>
-                <img className="img1" src={selectedImage1} alt="diceImage"/>
+                <img className="img1 diceImage" src={selectedImage1} alt="diceImage"/>
             </div>
 
             <div className="dice card mx-auto">
                 <input type='text' onChange={handleChange} name="player2" value={player.player2}/>
                 <p className="playerName">{player.player2}</p>
-                <img className="img2" src={selectedImage2} alt="diceImage"/>
+                <img className="img2 diceImage" src={selectedImage2} alt="diceImage"/>
             </div>
         </div>
         <button className="btn-primary btn-lg" onClick={playGame}>Play Game</button>

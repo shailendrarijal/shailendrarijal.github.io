@@ -35,7 +35,8 @@ function WeatherApp(){
           });});
        
     return (
-        <div className="container jumbotron text-center">
+        <div className="container-fluid">
+        <div className="text-center">
         <h1>Weather App</h1>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="cityInput">City Name:</label>
@@ -49,6 +50,7 @@ function WeatherApp(){
             </div>
             
             
+        </div>
         </div>
 
  );

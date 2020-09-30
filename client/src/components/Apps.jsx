@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Apps(){
 
     return (
-        <div>
+        <div className="container-fluid">
             <section id="portfolio" class="portfolio">
                 <h2 class="text-center">Apps</h2>
                 <div class="container">

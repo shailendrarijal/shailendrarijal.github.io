@@ -5,8 +5,8 @@ import displayPicture from '../images/about-image.jpg';
 function About() {
   
   return (
-    <div>
-        <section id="about" class="container-fluid about">
+    <div className="container-fluid">
+        <section id="about" class="about">
           <div class="row">
             <div class="col-lg-4 col-md-8 col-sm-12 img-container">
               <img src={displayPicture} class="img-fluid" alt ="display"/>

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom";
 
 function Contact() {
   
@@ -9,7 +10,7 @@ function Contact() {
     }
 
   return (
-    <div>
+    <div className="container-fluid">
         <section id="contact" class="contact text-center">
             <h2>Get in touch</h2>
             <div class="container">
@@ -22,7 +23,7 @@ function Contact() {
                 </div>
             </div>
 
-            {visibility? <div className={visibility, "text-center container"}><span>Email: shailendrarijal@gmail.com</span></div> : null }
+            {visibility? <div className={visibility}><span>Email: shailendrarijal@gmail.com</span></div> : null }
 
         </section>
     </div>
@@ -30,3 +31,4 @@ function Contact() {
 }
 
 export default Contact;
+export {Link};

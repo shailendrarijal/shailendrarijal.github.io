@@ -17,38 +17,42 @@ function Calculator(){
     function handleChange(event){
        const {value, name} = event.target;
 
-       setValues((prevValue) => {
-           if (name === "height") {
-               return {
-                   heightValue: value,
-                   weightValue: prevValue.weightValue
-               }
-           } else if (name === "weight") {
-               return {
-                   heightValue: prevValue.height,
-                   weightValue: value
-               }
-           }
-       })
+       if (name !== null){
+            setValues((prevValue) => {
+                if (name === "height") {
+                    return {
+                        heightValue: value,
+                        weightValue: prevValue.weightValue
+                    }
+                } else if (name === "weight") {
+                    return {
+                        heightValue: prevValue.height,
+                        weightValue: value
+                    }
+                }
+            })
+        }   
     }
 
 
 
 
     return (
-        <div class="container-fluid jumbotron text-center">
+        <div class="container-fluid">
+        <div className="text-center jumbotron">
             <h1>BMI Calculator</h1>
-            <form>
+            <form className="bmiForm">
                 <input 
                 onChange={handleChange}
-                class="form-control-sm" type="text" value = {values.weightValue} name="weight" placeholder="Enter your weight" /><code class="code">in Kg</code><br />
+                class="form-control-sm" type="number" value = {values.weightValue} name="weight" placeholder="Enter your weight" required/><code class="code">in Kg</code><br />
                 <input 
                 onChange={handleChange}
-                class="form-control-sm" type="text" value = {values.heightValue} name="height" placeholder="Enter your height" /><code class="code">in m</code><br />
+                class="form-control-sm" type="number" value = {values.heightValue} name="height" placeholder="Enter your height" required/><code class="code">in m</code><br />
 
                 <button class="btn-lg btn-primary" onClick={handleClick}>Calculate</button>
             </form>
             <p class="resultDisplay">Your BMI is {bmiValue}</p>
+        </div>
         </div>
 
  );

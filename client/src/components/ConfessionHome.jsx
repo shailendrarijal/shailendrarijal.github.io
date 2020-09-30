@@ -3,7 +3,7 @@ import React from "react";
 
 function ConfessionHome() {
     return (
-        <div class="jumbotron centered">
+        <div class="centered">
         <div class="container">
           <i class="fas fa-key fa-6x"></i>
           <h1 class="display-3">Confession! Coming soon</h1>

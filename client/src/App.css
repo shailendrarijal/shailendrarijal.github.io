@@ -8,6 +8,11 @@
   color: #efefef;
 }
 
+.jumbotron{
+  margin-top: 5%;
+}
+
+
 /*////////////////////////////end of bootstrap formats//////////////////////*/
 
 
@@ -34,8 +39,8 @@
   justify-content: flex-end;
 }
 
-.navbar-toggler{
-  background: lightblue !important;
+.fa{
+  color: #888;
 }
 
 section{
@@ -98,7 +103,7 @@ section{
   cursor: pointer;
 }
 .icon-container:hover{
- width: 80px;
+  width: 80px;
   height: 80px;
 }
 .icon{
@@ -170,7 +175,6 @@ section{
   width: 95%;
   max-width: 100%;
   margin: 1em;
-  border: 5px solid #333333;
   opacity: 0.8;
   padding: 1em;
 }
@@ -197,13 +201,21 @@ section{
   text-decoration: none;
   color: #10828c;
 }
+
+
+
 /*////////////////////////////End of Contact//////////////////////*/
 
 /*////////////////////////////Apps//////////////////////*/
 .drum {
   border-radius: 100%;
-  width: 10rem;
-  height: 10rem;
+  outline: none;
+  border: 10px solid #DBEDF3;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: white;
 }
 
 .w {
@@ -259,6 +271,14 @@ section{
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.bmiForm input[type="number"]{
+  margin: 10px;
+}
+
+.diceImage{
+  height: 150px;
 }
 
 .result, .playerName{

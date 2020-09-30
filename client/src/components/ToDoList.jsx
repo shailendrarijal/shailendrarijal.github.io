@@ -20,7 +20,8 @@ function ToDoList() {
   }
 
   return (
-    <div class="jumbotron text-center text-primary">
+    <div className="container-fluid">
+    <div class="text-center jumbotron">
       <h1> Take note!</h1>
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
@@ -35,6 +36,7 @@ function ToDoList() {
         );
       })}
         
+    </div>
     </div>
   );
 }
