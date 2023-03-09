@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "secure": false,
+  "main": "./public/index.html",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
