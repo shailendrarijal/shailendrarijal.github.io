@@ -1,38 +1,63 @@
-import React, {useState, Component, useEffect} from "react";
-import axios from "axios";
+import React, {useState} from "react";
 import { Button } from '@material-ui/core';
 import TimeNow from './TimeNow';
 
 
 function WeatherApp(){
-
-    const [url, setUrl] = useState("");
       
-    const [city, setCityName] = useState({
-        cityName: "",
+    const [city, setCityName] = useState("");
+    const [weather, setWeather] = useState({
         temperature: "",
         weatherDescription: ""
     });
 
-    function handleChange(event){
-        const cityurl = event.target.value;
-        setCityName({cityName: cityurl});
-       
-        const apiKey = process.env.WeatherAPIKey;
-        const unit = "metric";
+    const apiKeyWeather = process.env.REACT_APP_WEATHER_API_KEY;
 
-        const url="https://api.openweathermap.org/data/2.5/weather?q=" + cityurl +"&units=" + unit+ "&appid=" + apiKey +"";
-        setUrl(url);
+    function handleChange(event){
+        setCityName(event.target.value);
+    };
+
+    function searchWeather() {
+        const fetchGeoCodeUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1" + "&appid=" + apiKeyWeather;
+
+        fetch(fetchGeoCodeUrl)
+            .then((res) => {
+                if (res.status >= 400) {
+                    setWeather({
+                        temperature: "XXX",
+                        weatherDescription: "Sorry, an error from server"
+                    });
+                }
+                return res.json();
+            })
+            .then((data) => {
+                console.log("Data for codes is: ", data[0].lat);
+                fetchWeather(data[0].lat, data[0].lon);
+            });
     }
 
+    function fetchWeather(lat, lon) {
+        console.log("Data for codes is: ", lat, lon);
 
-    useEffect(() => {
-        const apiUrl = url;
-        fetch(apiUrl)
-          .then((res) => res.json())
-          .then((data) => {
-            setCityName({data: data });
-          });});
+        const fetchWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKeyWeather + "&units=metric";
+        fetch(fetchWeatherUrl)
+            .then((res) => {
+                if (res.status >= 400) {
+                    setWeather({
+                        temperature: "XXX",
+                        weatherDescription: "Sorry, an error from server"
+                    });
+                }
+                return res.json();
+            })
+            .then((data) => {
+                setWeather({
+                    temperature: data.main.temp,
+                    weatherDescription: data.weather[0].description
+                });
+            });
+
+    }
        
     return (
         <div className="container-fluid">
@@ -40,13 +65,13 @@ function WeatherApp(){
         <h1>Weather App</h1>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="cityInput">City Name:</label>
-                <input onChange={handleChange} id="cityInput" type="text" name="cityName" value={city.cityName} autoComplete="off"/>
-                <Button variant="contained" color="primary" type="submit" onClick={useEffect}>Find</Button>
-                <p> The city you are looking for is: <strong>{city.cityName}</strong></p>
+                <input onChange={handleChange} id="cityInput" type="text" name="cityName" value={city} autoComplete="off"/>
+                <Button variant="contained" color="primary" type="submit" onClick={()=>searchWeather()}>Find</Button>
+                <p> The city you are looking for is: <strong>{city}</strong></p>
             </form>
             <div id="result">
-                <p>The temparature of '<strong>{city.cityName}</strong>' at '<strong><TimeNow /></strong>' is '<strong>{city.temprature}</strong>' &deg;C</p>
-                <p>It looks like the weather today is going to be {city.weatherDescription} </p>
+                    <p>The temparature of '<strong>{city}</strong>' at '<strong><TimeNow /></strong>' is '<strong>{weather.temperature}</strong>' &deg;C</p>
+                    <p>It looks like the weather today is going to be {weather.weatherDescription} </p>
             </div>
             
             

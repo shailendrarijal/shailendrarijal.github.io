@@ -23,17 +23,17 @@ function Apps(){
                         <div class="card-body">
                             <h5 class="card-title">BMI Calculator</h5>
                             <p class="card-text">Enter your weight and height and calcualate your BMI</p> 
-                            <Link to="/Calculator" class="btn seemore">Take me there</Link>
+                            <Link to="/bmicalculator" class="btn seemore">Take me there</Link>
                         </div>
                     </div>
 
-                    {/* <div class="card card-portfolio mb-5">
+                    <div class="card card-portfolio mt-5">
                         <div class="card-body">
                             <h5 class="card-title">Weather-App</h5>
-                            <p class="card-text">This app uses API from openweather to display some weather characterstics of cities entered by the user.</p>
-                            <Link to="/WeatherApp" class="btn seemore">Take me there</Link>
+                            <p class="card-text">Enter city and get weather</p>
+                            <Link to="/weather" class="btn seemore">Take me there</Link>
                         </div>
-                    </div> */}
+                    </div>
 
                     <div class="card card-portfolio mt-5">
                         <div class="card-body">
@@ -46,7 +46,7 @@ function Apps(){
                     <div class="card card-portfolio mt-5">
                         <div class="card-body">
                         <h5 class="card-title">Dice Game</h5>
-                        <p class="card-text">Resolve yur dispute with this Dice game. Higher number wins! </p> 
+                        <p class="card-text">Resolve your dispute with this Dice game. Higher number wins! </p> 
                         <Link to="/DiceGame" class="btn seemore">Take me there</Link>
                         </div>
                     </div>

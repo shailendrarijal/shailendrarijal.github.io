@@ -4,6 +4,8 @@ import bbnImg from "../images/bbn.JPG";
 import kasturigharImg from "../images/kasturighar.JPG";
 import documentationImg from "../images/technical-documentation.JPG";
 import surveryFormImg from "../images/survey-form.JPG";
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -29,7 +31,7 @@ function Projects() {
               <div class="card-body">
                 <h5 class="card-title">Kasturi Ghar</h5>
                 <p class="card-text">My first client based project using HTML, CSS and JavaScript - created with the aim of promoting their ethno-community based business through web presence. </p> 
-                <a href="https://dry-beyond-48330.herokuapp.com/" target="_blank" class="btn seemore">Take me there</a>
+              <Link class="btn seemore" to="/kasturighar">Take me there</Link>
               </div>
             </div>
               
@@ -48,7 +50,25 @@ function Projects() {
                 <h5 class="card-title">Survey form</h5>
                 <p class="card-text">A form for survey - created as a project of freecodecamp Responsive Web design course</p> 
                 <a href="https://codepen.io/shailendrarijal/pen/MWKmprQ" target="_blank" class="btn seemore">Take me there</a>
-              </div>
+             </div>
+
+                </div>
+
+            <div class="card card-portfolio mt-5 mx-auto">
+                <img class="card-img-top" src="" alt="Naati app" />
+                <div class="card-body">
+                    <h5 class="card-title">Naati App</h5>
+                    <p class="card-text">Resource for Naati exam - created as a means of sharing resources</p>
+                    <Link class="btn seemore" to="/naati">Take me there</Link>
+                </div>
+            </div>
+            <div class="card card-portfolio mt-5 mx-auto">
+                <img class="card-img-top" src="" alt="Unit calculators" />
+                <div class="card-body">
+                    <h5 class="card-title">Unit Calculators</h5>
+                    <p class="card-text">Nepali unit calculators - created as a means of uplifting Nepali units</p>
+                    <Link class="btn seemore" to="/calculator">Take me there</Link>
+                </div>
             </div>
           </div>
          </div>
