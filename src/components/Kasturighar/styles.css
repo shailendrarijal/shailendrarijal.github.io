@@ -151,9 +151,9 @@ section {
     background-color: #65350F;
 }
 
-    .product-card:hover {
-        padding: 1rem 2rem;
-    }
+.product-card:hover {
+    padding: 1rem 2rem;
+}
 
 .product-img {
     width: 80%;
@@ -199,7 +199,7 @@ section {
     margin: auto;
 }
 
-.icon-container {
+.icon-container-kasturighar {
     cursor: pointer;
     box-shadow: 1px 5px 10px #60713c;
     background-color: #65350F;
@@ -254,12 +254,12 @@ footer {
     font-weight: bold;
 }
 
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .emailAddress, .phoneNumber {
     margin: auto;
@@ -272,7 +272,7 @@ footer {
         height: 70%;
     }
 
-    .icon-container {
+    .icon-container-kasturighar {
         width: 40%;
         margin: auto;
     }
