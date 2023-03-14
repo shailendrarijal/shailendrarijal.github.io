@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\public",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Calculator",
+    "\\src\\components\\Kasturighar\\images",
+    "\\src\\components\\Naati"
+  ],
+  "SelectedNode": "\\package.json",
+  "PreviewInSolutionExplorer": false
+}
